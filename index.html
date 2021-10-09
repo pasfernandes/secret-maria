@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Secret Moni</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 , minimum-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <script>
+            function track(type, callback) {
+                const http = new XMLHttpRequest();
+                const url = '/logging/' + type
+                http.open("GET", url);
+                http.onload = function () {
+                    if (callback) {
+                        callback();
+                    }
+                };
+    
+                http.send();
+            }
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', '');
+    
+            function onDocumentLoad() {
+                track("view")
+                var joinButtons = document.querySelectorAll(".click-register");
+                for (let i = 0; i < joinButtons.length; i++) {
+                    joinButtons[i].addEventListener("click", function (e) {
+                        e.preventDefault();
+                        var url = this.getAttribute('href');
+                        track("click", function () {
+                            window.location.href = url
+                        });
+                    });
+                }
+            }
+        </script>
+    </head>
+    <body onload="onDocumentLoad()">
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <div class="center">
+            <h1>Heyyyyyyyyyyyy !!!!! </h1>
+            <h2>Enter on my Secret Chat</h2>
+            <h2>Entra no meu Chat Secreto</h2>
+            <h2>Rejoignez mon chat secret</h2>
+            <a href="https://k.rencontre-fiable.com/?abc=6af5a114f79ee0ca&xa=n&acme=wid.42470&media=display&source=secret-maria" class="btn  leedbuttonclick button-link button" >Join FREE</a>
+        </div>
+    </body>
+</html>
